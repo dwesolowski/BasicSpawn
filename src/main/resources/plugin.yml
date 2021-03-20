@@ -1,0 +1,23 @@
+name: BasicSpawn
+version: ${version}
+api-version: ${api-version}
+author: dwesolowski
+main: com.github.dwesolowski.basicspawn.BasicSpawn
+
+commands:
+  spawn:
+    description: "Teleports a player to the saved spawn point."
+    permission: basicspawn.spawn
+    usage: |
+      Usage: /spawn
+
+permissions:
+  basicspawn.spawn:
+    default: true
+  basicspawn.admin:
+    default: false
+  basicspawn.*:
+    description: Wildcard
+    children:
+      basicspawn.admin: true
+    default: false
